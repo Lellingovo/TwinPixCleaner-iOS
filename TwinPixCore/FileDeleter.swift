@@ -1,0 +1,112 @@
+import Foundation
+import Photos
+
+struct FileDeleter {
+    /// Moves the file to Trash and returns the URL of the trashed item.
+    @discardableResult
+    static func deleteFile(at url: URL) throws -> URL {
+        let results = try deleteFiles(at: [url])
+        guard let trashed = results[url] else {
+            throw NSError(domain: "FileDeleter", code: 5, userInfo: [NSLocalizedDescriptionKey: "删除失败，未返回回收站路径"])
+        }
+        return trashed
+    }
+    
+    /// Batches deletions. For Apple Photos, this ensures only one permission prompt is shown.
+    /// Returns a dictionary mapping original URLs to their trashed URLs.
+    static func deleteFiles(at urls: [URL]) throws -> [URL: URL] {
+        var results: [URL: URL] = [:]
+        var photoLocalIdentifiers: [String] = []
+        var photoURLs: [URL] = []
+        var fileURLs: [URL] = []
+        
+        for url in urls {
+            if url.scheme == "photos" {
+                if let localIdentifier = PhotosAssetURL.localIdentifier(from: url) {
+                    photoLocalIdentifiers.append(localIdentifier)
+                    photoURLs.append(url)
+                }
+            } else {
+                fileURLs.append(url)
+            }
+        }
+
+        // Batch delete Apple Photos assets — a single performChanges call means only one
+        // permission prompt, and the change is atomic (all-or-nothing).
+        if !photoLocalIdentifiers.isEmpty {
+            let assets = PHAsset.fetchAssets(withLocalIdentifiers: photoLocalIdentifiers, options: nil)
+            
+            var assetsToDelete: [PHAsset] = []
+            assets.enumerateObjects { asset, _, _ in
+                assetsToDelete.append(asset)
+            }
+            
+            if !assetsToDelete.isEmpty {
+                class ErrorContainer: @unchecked Sendable {
+                    var error: Error?
+                }
+                
+                let group = DispatchGroup()
+                let errorContainer = ErrorContainer()
+                group.enter()
+                
+                PHPhotoLibrary.shared().performChanges({
+                    PHAssetChangeRequest.deleteAssets(assetsToDelete as NSArray)
+                }) { success, error in
+                    if !success {
+                        errorContainer.error = error ?? NSError(domain: "FileDeleter", code: 3, userInfo: [NSLocalizedDescriptionKey: "删除被拒绝"])
+                    }
+                    group.leave()
+                }
+                group.wait()
+                
+                if let error = errorContainer.error {
+                    throw error
+                }
+                
+                for url in photoURLs {
+                    results[url] = url // Photos don't change URL when trashed
+                }
+            }
+        }
+        
+        // Each Finder file is trashed independently — a failure on one file must not discard the
+        // URLs that were already successfully trashed above/before it. Files missing from
+        // `results` are treated as failed deletions by the caller.
+        for url in fileURLs {
+            do {
+                var resultingURL: NSURL?
+                let targetURL = url.standardizedFileURL
+                try FileManager.default.trashItem(at: targetURL, resultingItemURL: &resultingURL)
+                results[url] = (resultingURL as URL?) ?? targetURL
+            } catch {
+                AppLogger.general.error("Failed to trash item at \(url.path): \(error.localizedDescription)")
+                // Retry with raw URL if standardized differs
+                if url != url.standardizedFileURL {
+                    do {
+                        var resultingURL: NSURL?
+                        try FileManager.default.trashItem(at: url, resultingItemURL: &resultingURL)
+                        results[url] = (resultingURL as URL?) ?? url
+                    } catch {
+                        continue
+                    }
+                }
+            }
+        }
+
+        return results
+    }
+    
+    /// Restores a previously trashed file back to its original location.
+    static func restoreFile(from trashedURL: URL, to originalURL: URL) throws {
+        if originalURL.scheme == "photos" {
+            throw NSError(domain: "FileDeleter", code: 4, userInfo: [NSLocalizedDescriptionKey: "无法在应用内撤销相册删除，请到「照片」App 的「最近删除」中恢复。"])
+        }
+        
+        let parentDir = originalURL.deletingLastPathComponent()
+        if !FileManager.default.fileExists(atPath: parentDir.path) {
+            try FileManager.default.createDirectory(at: parentDir, withIntermediateDirectories: true)
+        }
+        try FileManager.default.moveItem(at: trashedURL, to: originalURL)
+    }
+}

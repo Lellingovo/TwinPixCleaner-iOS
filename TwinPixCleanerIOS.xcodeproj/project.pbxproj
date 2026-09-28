@@ -1,0 +1,399 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		08A0C97727E65CFA51E344F9 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACBF30867528829848AA318 /* AppConstants.swift */; };
+		2CB88A6580CE7F391E78D54E /* FileScanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3B9B7DF3FCC4ACE66EB3E6A /* FileScanner.swift */; };
+		36EF75DF3FE0D52D6CAD37BC /* ImageScanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D26635A96191E9E146E1818 /* ImageScanner.swift */; };
+		3C3B1FF2879E3FD08CD89AE2 /* AppViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B268AD558CF2F6D0B6C4E8 /* AppViewModel.swift */; };
+		3E3AB17B3B427AD7EEDEC23E /* PhotosAssetURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EF95EFB8E254FC414A093FD /* PhotosAssetURL.swift */; };
+		444E4244375A7A6BA73219A3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 232DD38A5E8868EDBBAACB5E /* Assets.xcassets */; };
+		47643A7EDDACCEC2793ABF84 /* StillImageEligibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2BF51456BA13F79CB0D43F /* StillImageEligibility.swift */; };
+		69738A72CF3C7A315DC58428 /* FileDeleter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE3C94E548DECA48CAA4CFD /* FileDeleter.swift */; };
+		732F672F1BC74EF33298B56D /* SimilarityDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = E949A4AE8CF0D45B88AF016D /* SimilarityDetector.swift */; };
+		8A1B2C3D4E5F60718293A4B5 /* AIJudgeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0D1E2F3A4B5C6D7E8F9012 /* AIJudgeService.swift */; };
+		9E9F12F8C271F5456BED9B53 /* SkippedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59982FCE47C8631D7C50B08 /* SkippedItem.swift */; };
+		A3D33A238B73DA3704C06DEC /* FeaturePrintEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54270F79194C2986FB7CEA61 /* FeaturePrintEngine.swift */; };
+		AB54DFCD4EA535F6577A2BB6 /* DuplicateGrouping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB42BF6CE4F98CEED34685B /* DuplicateGrouping.swift */; };
+		B097849156C741A7103B7BB3 /* DuplicateDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F523A2F14FD9167FD3BA06 /* DuplicateDetector.swift */; };
+		B15EFB5796991A61FDCF2BAC /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61252516EB31645E4FA948EA /* AppError.swift */; };
+		B97235D5EFB63B1AEB633441 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216163DF60332EFD60D5248A /* ContentView.swift */; };
+		BDA09EBCD1BCD665DE59EAE2 /* ImageHasher.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF6917D5076E6A8267275678 /* ImageHasher.swift */; };
+		D9282C92B24CD057C4468037 /* PhotoLibraryScanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966D6C0010072AB1D2832FA3 /* PhotoLibraryScanner.swift */; };
+		FD533D42EC99BD95797D593F /* TwinPixCleanerIOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 534ECE823B3D12DF2FF6FDAE /* TwinPixCleanerIOSApp.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		216163DF60332EFD60D5248A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		232DD38A5E8868EDBBAACB5E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3513B73DCF2399EDE4557954 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		4D8472971BBB86F13C37D06F /* TwinPixCleanerIOS.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = TwinPixCleanerIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		534ECE823B3D12DF2FF6FDAE /* TwinPixCleanerIOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwinPixCleanerIOSApp.swift; sourceTree = "<group>"; };
+		54270F79194C2986FB7CEA61 /* FeaturePrintEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturePrintEngine.swift; sourceTree = "<group>"; };
+		5ACBF30867528829848AA318 /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
+		5DB42BF6CE4F98CEED34685B /* DuplicateGrouping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DuplicateGrouping.swift; sourceTree = "<group>"; };
+		61252516EB31645E4FA948EA /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
+		7E2BF51456BA13F79CB0D43F /* StillImageEligibility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StillImageEligibility.swift; sourceTree = "<group>"; };
+		7EF95EFB8E254FC414A093FD /* PhotosAssetURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosAssetURL.swift; sourceTree = "<group>"; };
+		966D6C0010072AB1D2832FA3 /* PhotoLibraryScanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoLibraryScanner.swift; sourceTree = "<group>"; };
+		9C0D1E2F3A4B5C6D7E8F9012 /* AIJudgeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIJudgeService.swift; sourceTree = "<group>"; };
+		9D26635A96191E9E146E1818 /* ImageScanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageScanner.swift; sourceTree = "<group>"; };
+		B9F523A2F14FD9167FD3BA06 /* DuplicateDetector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DuplicateDetector.swift; sourceTree = "<group>"; };
+		C15D818E7E002792D11D8F90 /* TwinPix.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TwinPix.entitlements; sourceTree = "<group>"; };
+		C3B9B7DF3FCC4ACE66EB3E6A /* FileScanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileScanner.swift; sourceTree = "<group>"; };
+		CAE3C94E548DECA48CAA4CFD /* FileDeleter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileDeleter.swift; sourceTree = "<group>"; };
+		E59982FCE47C8631D7C50B08 /* SkippedItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkippedItem.swift; sourceTree = "<group>"; };
+		E949A4AE8CF0D45B88AF016D /* SimilarityDetector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimilarityDetector.swift; sourceTree = "<group>"; };
+		F6B268AD558CF2F6D0B6C4E8 /* AppViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppViewModel.swift; sourceTree = "<group>"; };
+		FF6917D5076E6A8267275678 /* ImageHasher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageHasher.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		9A3E71DB65EDC288C1A44D3E = {
+			isa = PBXGroup;
+			children = (
+				EDA2AD8D851D7AD1B5EA6CD4 /* TwinPixCore */,
+				B5034A02EC4A3D19B4012318 /* TwinPixIOS */,
+				ED02B9ED53AE95CC60F41106 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B5034A02EC4A3D19B4012318 /* TwinPixIOS */ = {
+			isa = PBXGroup;
+			children = (
+				9C0D1E2F3A4B5C6D7E8F9012 /* AIJudgeService.swift */,
+				F6B268AD558CF2F6D0B6C4E8 /* AppViewModel.swift */,
+				232DD38A5E8868EDBBAACB5E /* Assets.xcassets */,
+				216163DF60332EFD60D5248A /* ContentView.swift */,
+				3513B73DCF2399EDE4557954 /* Info.plist */,
+				C15D818E7E002792D11D8F90 /* TwinPix.entitlements */,
+				534ECE823B3D12DF2FF6FDAE /* TwinPixCleanerIOSApp.swift */,
+			);
+			path = TwinPixIOS;
+			sourceTree = "<group>";
+		};
+		ED02B9ED53AE95CC60F41106 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4D8472971BBB86F13C37D06F /* TwinPixCleanerIOS.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EDA2AD8D851D7AD1B5EA6CD4 /* TwinPixCore */ = {
+			isa = PBXGroup;
+			children = (
+				5ACBF30867528829848AA318 /* AppConstants.swift */,
+				61252516EB31645E4FA948EA /* AppError.swift */,
+				B9F523A2F14FD9167FD3BA06 /* DuplicateDetector.swift */,
+				5DB42BF6CE4F98CEED34685B /* DuplicateGrouping.swift */,
+				54270F79194C2986FB7CEA61 /* FeaturePrintEngine.swift */,
+				CAE3C94E548DECA48CAA4CFD /* FileDeleter.swift */,
+				C3B9B7DF3FCC4ACE66EB3E6A /* FileScanner.swift */,
+				FF6917D5076E6A8267275678 /* ImageHasher.swift */,
+				9D26635A96191E9E146E1818 /* ImageScanner.swift */,
+				966D6C0010072AB1D2832FA3 /* PhotoLibraryScanner.swift */,
+				7EF95EFB8E254FC414A093FD /* PhotosAssetURL.swift */,
+				E949A4AE8CF0D45B88AF016D /* SimilarityDetector.swift */,
+				E59982FCE47C8631D7C50B08 /* SkippedItem.swift */,
+				7E2BF51456BA13F79CB0D43F /* StillImageEligibility.swift */,
+			);
+			path = TwinPixCore;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0215682C4BB8B4C62D60C998 /* TwinPixCleanerIOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 21AED9F7607FB52219683021 /* Build configuration list for PBXNativeTarget "TwinPixCleanerIOS" */;
+			buildPhases = (
+				FC5D422C7F18F5FEB7A5FCA4 /* Sources */,
+				52355C4CE83756BB38F37584 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TwinPixCleanerIOS;
+			packageProductDependencies = (
+			);
+			productName = TwinPixCleanerIOS;
+			productReference = 4D8472971BBB86F13C37D06F /* TwinPixCleanerIOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		716C1C4B4BFDD826AAC22615 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1600;
+				TargetAttributes = {
+					0215682C4BB8B4C62D60C998 = {
+						DevelopmentTeam = M7XWC8Q6HN;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = F886399A8C04C60C1DE90FE9 /* Build configuration list for PBXProject "TwinPixCleanerIOS" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = 9A3E71DB65EDC288C1A44D3E;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0215682C4BB8B4C62D60C998 /* TwinPixCleanerIOS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		52355C4CE83756BB38F37584 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				444E4244375A7A6BA73219A3 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FC5D422C7F18F5FEB7A5FCA4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8A1B2C3D4E5F60718293A4B5 /* AIJudgeService.swift in Sources */,
+				08A0C97727E65CFA51E344F9 /* AppConstants.swift in Sources */,
+				B15EFB5796991A61FDCF2BAC /* AppError.swift in Sources */,
+				3C3B1FF2879E3FD08CD89AE2 /* AppViewModel.swift in Sources */,
+				B97235D5EFB63B1AEB633441 /* ContentView.swift in Sources */,
+				B097849156C741A7103B7BB3 /* DuplicateDetector.swift in Sources */,
+				AB54DFCD4EA535F6577A2BB6 /* DuplicateGrouping.swift in Sources */,
+				A3D33A238B73DA3704C06DEC /* FeaturePrintEngine.swift in Sources */,
+				69738A72CF3C7A315DC58428 /* FileDeleter.swift in Sources */,
+				2CB88A6580CE7F391E78D54E /* FileScanner.swift in Sources */,
+				BDA09EBCD1BCD665DE59EAE2 /* ImageHasher.swift in Sources */,
+				36EF75DF3FE0D52D6CAD37BC /* ImageScanner.swift in Sources */,
+				D9282C92B24CD057C4468037 /* PhotoLibraryScanner.swift in Sources */,
+				3E3AB17B3B427AD7EEDEC23E /* PhotosAssetURL.swift in Sources */,
+				732F672F1BC74EF33298B56D /* SimilarityDetector.swift in Sources */,
+				9E9F12F8C271F5456BED9B53 /* SkippedItem.swift in Sources */,
+				47643A7EDDACCEC2793ABF84 /* StillImageEligibility.swift in Sources */,
+				FD533D42EC99BD95797D593F /* TwinPixCleanerIOSApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		0C55ACB6B97B4EAE5371F3B3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = M7XWC8Q6HN;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = TwinPixIOS/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "相册扫描";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "相册扫描需要访问照片以管理重复项。";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "相册扫描会在本机分析照片库中的重复与相似图片，方便你清理多余照片。";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.wangjiale.TwinPixCleanerIOS;
+				PRODUCT_NAME = "相册扫描";
+				SDKROOT = iphoneos;
+				SWIFT_STRICT_CONCURRENCY = minimal;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		298E57E3DB5F6834CC61A27E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = M7XWC8Q6HN;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		C93A09389667D5191D22E85C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = M7XWC8Q6HN;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CBF4A61A67293E547667D3E7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = M7XWC8Q6HN;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = TwinPixIOS/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "相册扫描";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "相册扫描需要访问照片以管理重复项。";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "相册扫描会在本机分析照片库中的重复与相似图片，方便你清理多余照片。";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.wangjiale.TwinPixCleanerIOS;
+				PRODUCT_NAME = "相册扫描";
+				SDKROOT = iphoneos;
+				SWIFT_STRICT_CONCURRENCY = minimal;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		21AED9F7607FB52219683021 /* Build configuration list for PBXNativeTarget "TwinPixCleanerIOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CBF4A61A67293E547667D3E7 /* Debug */,
+				0C55ACB6B97B4EAE5371F3B3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		F886399A8C04C60C1DE90FE9 /* Build configuration list for PBXProject "TwinPixCleanerIOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C93A09389667D5191D22E85C /* Debug */,
+				298E57E3DB5F6834CC61A27E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 716C1C4B4BFDD826AAC22615 /* Project object */;
+}

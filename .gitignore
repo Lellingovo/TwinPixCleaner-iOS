@@ -1,0 +1,38 @@
+# Xcode / macOS
+DerivedData/
+build/
+Build/
+*.xcuserdata
+*.xcuserstate
+xcuserdata/
+*.moved-aside
+*.hmap
+*.ipa
+*.dSYM.zip
+*.dSYM
+timeline.xctimeline
+playground.xcworkspace
+.swiftpm/configuration/registries.json
+.swiftpm/xcode/package.xcworkspace/contents.xcworkspacedata
+.netrc
+
+# macOS
+.DS_Store
+**/.DS_Store
+*.swp
+*~
+
+# Secrets / keys
+.env
+.env.*
+*.pem
+api_key
+**/api_key
+
+# Python / temp
+__pycache__/
+*.pyc
+.venv/
+
+# Archives / local icons source (keep Assets)
+*.zip
